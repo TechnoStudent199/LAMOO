@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awww Sorry! 😿</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    img {
+      width: 160px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #e91e63;
+      margin-bottom: 5px;
+    }
+    p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .punishment-box {
+      background: #fce4ec;
+      border: 2px dashed #ff4081;
+      padding: 15px;
+      border-radius: 15px;
+      margin: 15px 0;
+    }
+    .penalty-text {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 0.95rem;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    .btn-truce {
+      background-color: #8e24aa;
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTBvZXpsdnBqbjFkZjRxYWFyZWV2NmR0ZjlqaDNnb2I5YTZuZHNtcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qA9B2y4CDUS3MOMyY6/giphy.gif" alt="Sorry Cat">
+    
+    <h2>I'm Really Sorry! 🐾</h2>
+    <p>Acha baba galti ho gayi, aaj thoda over kar diya tha maine! Ab batao mujhe kya punishment milni chahiye?</p>
+
+    <div class="punishment-box">
+      <div class="penalty-text" id="penaltyDisplay">Spin karo punishment select karne ke liye 👇</div>
+      <button class="btn" onclick="spinPenalty()">Spin Punishment 🎰</button>
+    </div>
+
+    <button class="btn btn-truce" onclick="acceptApology()">im forgiving you for this time only ✨</button>
+  </div>
+
+  <script>
+    const penalties = [
+      "Mujhe ek cute voice note bhej ke apology mangni padegi 🎙️",
+      "Next time milenge toh tumhari fav boba / ice-cream meri taraf se 🧋",
+      "Tumhe free pass milta hai mujhe jitna chahe roast karne ka 🎟️",
+      "Mujhe ek embarrassing selfie bhejni padegi abhi 🤳"
+    ];
+
+    function spinPenalty() {
+      const display = document.getElementById('penaltyDisplay');
+      let count = 0;
+      const interval = setInterval(() => {
+        display.innerText = penalties[Math.floor(Math.random() * penalties.length)];
+        count++;
+        if (count > 6) {
+          clearInterval(interval);
+        }
+      }, 90);
+    }
+
+    function acceptApology() {
+      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+      alert("Yay! Best cat mom ever 😸 Truce accepted!");
+    }
+  </script>
+</body>
+</html>
