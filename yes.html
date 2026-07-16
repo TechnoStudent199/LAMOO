@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yayyy! 😸</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      background-color: #e8f5e9;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 350px;
+      width: 90%;
+    }
+    img {
+      width: 180px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3c0azByMmxydDdrNXNyeXUzbTlqMWdveGNrNXdwNDNldTFzaHQxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GeimqsH0TLDt4tScGw/giphy.gif" alt="Happy Cat">
+    
+    <h2>Woohoo! Chill Scene hai! 🎉</h2>
+    <p>Mujhe laga tha aaj ka roast zyaada ho gaya! Par agar gussa nahi ho toh mast scene hai, ab kal firse tease karunga 😜</p>
+  </div>
+
+  <script>
+    // Trigger happy confetti automatically on page load
+    window.onload = function() {
+      confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+    };
+  </script>
+</body>
+</html>a
