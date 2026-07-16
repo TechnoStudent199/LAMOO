@@ -3,56 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yayyy! 😸</title>
+  <title>My Bad 🌸</title>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     body {
-      background-color: #e8f5e9;
-      font-family: 'Segoe UI', sans-serif;
+      background: #fff1f2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
-      text-align: center;
+      padding: 20px;
     }
     .card {
       background: white;
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      max-width: 350px;
-      width: 90%;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
     }
     img {
       width: 180px;
-      border-radius: 15px;
+      border-radius: 18px;
       margin-bottom: 15px;
     }
     h2 {
-      color: #2e7d32;
+      color: #f43f5e;
+      font-size: 1.5rem;
+      font-weight: 700;
       margin-bottom: 10px;
     }
     p {
-      color: #555;
+      color: #475569;
       font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    .message-box {
+      background: #fff5f5;
+      border: 1px solid #fecdd3;
+      padding: 14px;
+      border-radius: 16px;
+      color: #9f1239;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .btn {
+      background: #f43f5e;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      width: 100%;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .btn:active {
+      transform: scale(0.96);
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3c0azByMmxydDdrNXNyeXUzbTlqMWdveGNrNXdwNDNldTFzaHQxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GeimqsH0TLDt4tScGw/giphy.gif" alt="Happy Cat">
+    <!-- Apology Hug Cat GIF -->
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3NpaWNsd2EwbGFpd3BmeWVnZTVwN29vMzlnenFqZGtrbmJzcXF4MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K1tgb1IUeBOXS/giphy.gif" alt="Cat Apology">
     
-    <h2>Woohoo! Chill Scene hai! 🎉</h2>
-    <p>Mujhe laga tha aaj ka roast zyaada ho gaya! Par agar gussa nahi ho toh mast scene hai, ab kal firse tease karunga 😜</p>
+    <h2>My bad, fr! 🐾</h2>
+    <p>Galti ho gayi bro, didn't mean to go overboard with the teasing today.</p>
+
+    <div class="message-box">
+      ✨ <b>Real talk:</b> You're genuinely super fun to talk to and your vibe is top tier. Thanks for being cool even when I act stupid 💀
+    </div>
+
+    <button class="btn" onclick="popConfetti()">Smile now? 😊</button>
   </div>
 
   <script>
-    // Trigger happy confetti automatically on page load
-    window.onload = function() {
-      confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
-    };
+    function popConfetti() {
+      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+      alert("Yayy, glad we're good! 💖");
+    }
   </script>
 </body>
-</html>a
+</html>
